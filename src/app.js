@@ -24,11 +24,12 @@ app.post("/signup",async(req,res) =>{
 
 
 
-connectDB().then(() =>{
-    console.log("database connection established...!");
-    app.listen(7777,() =>{
-        console.log("server is successgully listening on port 7777...!");
-    });
-}).catch(err =>{
-    console.log("database connection cannot be established...!");
+connectDB()
+ .then(() =>{
+     console.log("database connection established...!");
+     app.listen(7777,() =>{
+         console.log("server is successgully listening on port 7777...!");
+     });
+     }).catch(err =>{
+     console.log("database connection cannot be established...!");
 });
